@@ -1,0 +1,3 @@
+MIP: Cut [E] ━━/ /━━➤ [A, B, C, D, F]
+Phi: Φ = 0
+Time: 32.512758s

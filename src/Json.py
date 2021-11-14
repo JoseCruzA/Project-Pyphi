@@ -9,7 +9,7 @@ data = json.load(file)[0]
 for i in data["graphs"]:
     graph = Graph()
     graph.create_graph(i)
-    if (len(graph.cm) > 0 and graph.name != "Graph 6"):
+    if (len(graph.cm) > 0 and (graph.name == "Graph 8" or graph.name == "Graph 9")):
         for path in pathlib.Path('config').iterdir():
             if path.is_file():
                 if "emd_bi.yml" in path.name or "emd_tri.yml" in path.name or "l1_bi.yml" in path.name:

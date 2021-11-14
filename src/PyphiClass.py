@@ -1,4 +1,5 @@
 import pyphi
+import platform
 import numpy as np
 
 class Pyphi:
@@ -51,7 +52,8 @@ class Pyphi:
                 sia (pyphi.Subsystem): subsystem of the graph
         """
         cm = "_cm" if self.with_cm else ""
-        file = open("assets/results/" + self.graph_name.replace(" ", "_") + "_" + self.config + cm + ".txt", "w+")
+        so = "windows/" if platform.system() == "Windows" else "linux/"
+        file = open("assets/results/" + so + self.graph_name.replace(" ", "_") + "_" + self.config + cm + ".txt", "w+")
         file.write("MIP: " + str(sia.cut) + "\n")
         file.write("Phi: Φ = " + str(sia.phi) + "\n")
         file.write("Time: " + str(sia.time) + "s")
