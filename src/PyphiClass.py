@@ -52,7 +52,7 @@ class Pyphi:
                 sia (pyphi.Subsystem): subsystem of the graph
         """
         cm = "_cm" if self.with_cm else ""
-        so = "windows/" if platform.system() == "Windows" else "linux/"
+        so = "windows/" if platform.system() == "Windows" else ("linux/" if platform.system() == "Linux" else "mac/")
         file = open("assets/results/" + so + self.graph_name.replace(" ", "_") + "_" + self.config + cm + ".txt", "w+")
         file.write("MIP: " + str(sia.cut) + "\n")
         file.write("Phi: Φ = " + str(sia.phi) + "\n")
