@@ -53,7 +53,12 @@ class Pyphi:
         """
         cm = "_cm" if self.with_cm else ""
         so = "windows/" if platform.system() == "Windows" else ("linux/" if platform.system() == "Linux" else "mac/")
-        file = open("assets/results/" + so + self.graph_name.replace(" ", "_") + "_" + self.config + cm + ".txt", "w+")
+        if(platform.system() == "Windows"):
+            file = open("assets/results/" + so + self.graph_name.replace(" ",
+                        "_") + "_" + self.config + cm + ".txt", "w+")
+        elif(platform.system() == "Linux"):
+            file = open("/home/camilog/UNIVERSIDAD/2021-2/Analisis y Diseño de Algoritmos/Project-Pyphi/assets/results/" + so + self.graph_name.replace(" ",
+                                                                                                                                                        "_") + "_" + self.config + cm + ".txt", "w+")
         file.write("MIP: " + str(sia.cut) + "\n")
         file.write("Phi: Φ = " + str(sia.phi) + "\n")
         file.write("Time: " + str(sia.time) + "s")
