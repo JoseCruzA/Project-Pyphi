@@ -1,0 +1,3 @@
+[submodule "sourceCode"]
+	path = sourceCode
+	url = https://github.com/wmayner/pyphi.git
