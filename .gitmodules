@@ -1,3 +1,4 @@
-[submodule "sourceCode"]
-	path = sourceCode
-	url = https://github.com/wmayner/pyphi.git
+
+[submodule "pyphiSource"]
+	path = pyphiSource
+	url = https://github.com/JoseCruzA/pyphi.git
